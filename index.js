@@ -1,15 +1,14 @@
-const http = require('http');
+const express= require('express');
 
-const server = http.createServer((req, res) => {
-  if(req.url == "/about") {
-    return res.end('This is the about page.\n');
-  }
-  if(req.url == "/contact") {
-    return res.end('This is the contact page.\n');
-  }
-  return res.end('404 Not Found\n');
+const app= express();
+app.get('/', (req, res) => {
+    res.send('Hello World');
 });
-const PORT = 3000;  
-server.listen(PORT, () => {
-  console.log(`Server running at http://localhost:${PORT}/`);
+
+app.post('/signup', (req, res) => {
+   console.log('data inserted successfully');
+    res.send('data inserted successfully');
+});
+app.listen(3000, () => {
+    console.log('Server is running on port 3000');
 });
