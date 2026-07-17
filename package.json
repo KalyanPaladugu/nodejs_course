@@ -17,5 +17,9 @@
   "bugs": {
     "url": "https://github.com/KalyanPaladugu/nodejs_course/issues"
   },
-  "homepage": "https://github.com/KalyanPaladugu/nodejs_course#readme"
+  "homepage": "https://github.com/KalyanPaladugu/nodejs_course#readme",
+  "dependencies": {
+    "cors": "^2.8.6",
+    "express": "^5.2.1"
+  }
 }
