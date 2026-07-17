@@ -35,3 +35,5 @@ fetch("http://localhost:5000/users")
 Install
 npm install cors
 ```
+- ![Middleware](./images/middleware.jpg)
+- ![Middleware use](./images/middleware-use.jpg)
