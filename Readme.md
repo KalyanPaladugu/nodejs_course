@@ -11,3 +11,4 @@ Node Modules:
 
 - ![Route-parameter](./images/route-parameter.jpg)
 - ![Multiple-route-parameters](./images/multiple-routeparameters.jpg)
+- ![Query-parameters](./images/query-parameters.jpg)
