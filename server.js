@@ -1,12 +1,19 @@
 const express = require('express')
+const mongoose = require('mongoose');
+const authRoutes = require('./routes/authRoutes.js');
 
 const app = express()
+app.use(express.json());
 
-const userRoutes = require('./routes/userRoutes')
-const products = require('./routes/products')
+mongoose.connect('mongodb://localhost:27017/nextjs-course').then(()=>{
+    console.log('connected to db')
+}).catch((err)=>{
+    console.log(err)
+})
 
-app.use(userRoutes)
-app.use(products)
+app.use(authRoutes);
+
+
 
 
 app.listen(3000,()=>{
