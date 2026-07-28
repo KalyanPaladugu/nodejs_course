@@ -83,9 +83,10 @@ app.post("/login",async(req,res)=>{
     })
 })
 
-// app.get("/profile",authMiddleware,(req,res)=>{
-//     res.send("Profile data fetched")
-// })
+app.get("/profile",(req,res)=>{
+    console.log(req.headers.authorization)
+    res.send("Profile data fetched")
+})
 
 // app.get("/dashboard",authMiddleware,(req,res)=>{
 //     res.send("dashborad route")
