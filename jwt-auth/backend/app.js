@@ -1,7 +1,7 @@
 const dotenv = require('dotenv')
 dotenv.config()
 
-// const authMiddleware = require('./middelware/authMiddelware')
+const authMiddleware = require('./middleware/authMiddleware')
 const express = require("express")
 const jwt = require('jsonwebtoken')
 const cors = require('cors')
@@ -83,14 +83,14 @@ app.post("/login",async(req,res)=>{
     })
 })
 
-app.get("/profile",(req,res)=>{
+app.get("/profile",authMiddleware,(req,res)=>{
     console.log(req.headers.authorization)
     res.send("Profile data fetched")
 })
 
-// app.get("/dashboard",authMiddleware,(req,res)=>{
-//     res.send("dashborad route")
-// })
+app.get("/dashboard",authMiddleware,(req,res)=>{
+    res.send("dashborad route")
+})
 
 
 app.listen(process.env.PORT,()=>{
